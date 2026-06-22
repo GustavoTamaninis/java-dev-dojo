@@ -34,4 +34,21 @@ public class Calculadora {
         System.out.println("Num1: " + num1);
         System.out.println("Num2: " + num2);
     }
+
+    public void somaArray(int[] nums){
+        int soma = 0;
+        for(int num: nums){
+            soma += num;
+        }
+        System.out.println(soma);
+    }
+
+    //muda a forma de chamada:
+    public void somaVarArgs(int... nums){ //não se pode pedir nenhum outro parâmetro depois do Var Args.
+        int soma = 0;
+        for(int num: nums){
+            soma += num;
+        }
+        System.out.println(soma);
+    }
 }
