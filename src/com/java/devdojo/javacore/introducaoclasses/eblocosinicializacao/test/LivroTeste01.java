@@ -1,6 +1,6 @@
-package com.java.devdojo.javacore.introducaoclasses.blocosinicializacao.test;
+package com.java.devdojo.javacore.introducaoclasses.eblocosinicializacao.test;
 
-import com.java.devdojo.javacore.introducaoclasses.blocosinicializacao.domain.Livro;
+import com.java.devdojo.javacore.introducaoclasses.eblocosinicializacao.domain.Livro;
 
 public class LivroTeste01 {
     public static void main(String[] args) {

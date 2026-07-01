@@ -16,3 +16,13 @@ public class JogadorTest01 {
         }
     }
 }
+
+/*
+    Jogador 1 -- 1 Personagem
+    Time 1 -- N Jogador
+    Jogador N -- 1 Time
+    Estudante N -- N Curso
+
+    Dizer que os jogadores têm referência para o time, mas que o time não tem para jogadores, é unidirecional
+
+ */

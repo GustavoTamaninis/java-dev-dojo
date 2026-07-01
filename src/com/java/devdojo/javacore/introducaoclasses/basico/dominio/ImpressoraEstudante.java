@@ -1,4 +1,4 @@
-package com.java.devdojo.javacore.introducaoclasses.dominio;
+package com.java.devdojo.javacore.introducaoclasses.basico.dominio;
 
 public class ImpressoraEstudante {
     public void imprime(Estudante estudante){

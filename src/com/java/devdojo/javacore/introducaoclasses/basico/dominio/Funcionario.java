@@ -1,4 +1,4 @@
-package com.java.devdojo.javacore.introducaoclasses.dominio;
+package com.java.devdojo.javacore.introducaoclasses.basico.dominio;
 
 public class Funcionario {
     public String nome;

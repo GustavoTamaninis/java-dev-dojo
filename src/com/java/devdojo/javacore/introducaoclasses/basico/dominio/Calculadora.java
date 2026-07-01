@@ -1,4 +1,4 @@
-package com.java.devdojo.javacore.introducaoclasses.dominio;
+package com.java.devdojo.javacore.introducaoclasses.basico.dominio;
 
 public class Calculadora {
     public double somaDoisNumeros(double num1, double num2){

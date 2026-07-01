@@ -1,6 +1,7 @@
-package com.java.devdojo.javacore.introducaoclasses.blocosinicializacao.domain;
+package com.java.devdojo.javacore.introducaoclasses.eblocosinicializacao.domain;
 /*
     Ordem:
+    0- Bloco de inicialização estático é executado quando a JVM carregar a classe.
     1- Alocado espaço em memória para objeto;
     2- Cada atributo de classe é criado e inicializado
     com valores default ou com o que for passado;

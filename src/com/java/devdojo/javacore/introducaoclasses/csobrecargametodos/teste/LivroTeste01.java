@@ -1,6 +1,6 @@
-package com.java.devdojo.sobrecargametodos.teste;
+package com.java.devdojo.javacore.introducaoclasses.csobrecargametodos.teste;
 
-import com.java.devdojo.sobrecargametodos.dominio.Livro;
+import com.java.devdojo.javacore.introducaoclasses.csobrecargametodos.dominio.Livro;
 
 public class LivroTeste01 {
     public static void main(String[] args){

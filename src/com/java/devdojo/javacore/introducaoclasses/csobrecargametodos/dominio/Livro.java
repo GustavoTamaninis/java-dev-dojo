@@ -1,4 +1,4 @@
-package com.java.devdojo.sobrecargametodos.dominio;
+package com.java.devdojo.javacore.introducaoclasses.csobrecargametodos.dominio;
 
 public class Livro {
     private String nome;

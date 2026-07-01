@@ -1,6 +1,6 @@
-package com.java.devdojo.javacore.introducaoclasses.construtor.teste;
+package com.java.devdojo.javacore.introducaoclasses.dconstrutor.teste;
 
-import com.java.devdojo.javacore.introducaoclasses.construtor.dominio.Livro;
+import com.java.devdojo.javacore.introducaoclasses.dconstrutor.dominio.Livro;
 
 public class LivroTeste01 {
     public static void main(String[] args){

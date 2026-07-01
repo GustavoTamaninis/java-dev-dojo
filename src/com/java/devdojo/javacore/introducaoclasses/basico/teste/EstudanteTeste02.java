@@ -1,7 +1,7 @@
-package com.java.devdojo.javacore.introducaoclasses.teste;
+package com.java.devdojo.javacore.introducaoclasses.basico.teste;
 
-import com.java.devdojo.javacore.introducaoclasses.dominio.Estudante;
-//import com.java.devdojo.javacore.introducaoclasses.dominio.ImpressoraEstudante;
+import com.java.devdojo.javacore.introducaoclasses.basico.dominio.Estudante;
+//import com.java.devdojo.javacore.introducaoclasses.basico.dominio.ImpressoraEstudante;
 
 public class EstudanteTeste02 {
     public static void main(String[] args){

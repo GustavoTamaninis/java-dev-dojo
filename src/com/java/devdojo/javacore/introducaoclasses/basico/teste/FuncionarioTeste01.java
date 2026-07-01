@@ -1,6 +1,6 @@
-package com.java.devdojo.javacore.introducaoclasses.teste;
+package com.java.devdojo.javacore.introducaoclasses.basico.teste;
 
-import com.java.devdojo.javacore.introducaoclasses.dominio.Funcionario;
+import com.java.devdojo.javacore.introducaoclasses.basico.dominio.Funcionario;
 
 public class FuncionarioTeste01 {
     public static void main(String[] args){

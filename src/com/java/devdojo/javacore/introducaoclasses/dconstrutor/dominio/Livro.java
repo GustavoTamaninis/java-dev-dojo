@@ -1,4 +1,4 @@
-package com.java.devdojo.javacore.introducaoclasses.construtor.dominio;
+package com.java.devdojo.javacore.introducaoclasses.dconstrutor.dominio;
 
 public class Livro {
     private String nome;
