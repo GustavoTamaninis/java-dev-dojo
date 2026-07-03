@@ -4,6 +4,11 @@ public class Address {
     private String street;
     private String zipcode;
 
+    public void print(){
+        Employee e = new Employee();
+        e.name = "Diego"; // exemplo de um atributo protected acessado por outra classe do mesmo pacote.
+    }
+
     public String getStreet() {
         return street;
     }

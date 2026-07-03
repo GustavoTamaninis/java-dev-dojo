@@ -1,10 +1,11 @@
 package com.java.devdojo.javacore.introducaoclasses.hheranca.domain;
 
 public class Employee {
-    private String name;
-    private String socialSecurityNumber;
-    private Address address;
-    private double salary;
+    // Subclasses e classes no mesmo pacote herdam atributos "protected". Confira a classe Adress neste pacote.
+    protected String name;
+    protected String socialSecurityNumber;
+    protected Address address;
+    protected double salary;
 
     public void print(){
         System.out.println(this.name);
