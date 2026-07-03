@@ -10,8 +10,7 @@ public class InheritanceTest01 {
         address.setStreet("Tenente Ervino Miller");
         address.setZipcode("89.221.214");
 
-        Employee employee = new Employee();
-        employee.setName("John Theodore");
+        Employee employee = new Employee("John Theodore");
         employee.setSocialSecurityNumber("120-12-6770");
         employee.setSalary(5232.55);
         employee.setAddress(address);
@@ -19,8 +18,7 @@ public class InheritanceTest01 {
         employee.print();
         System.out.println("=====================");
 
-        Manager manager = new Manager();
-        manager.setName("Mark Smith");
+        Manager manager = new Manager("Mark Smith");
         manager.setSocialSecurityNumber("070-53-9590");
         manager.setSalary(12206.73);
         manager.setAddress(address);

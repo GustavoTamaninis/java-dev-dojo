@@ -1,11 +1,22 @@
 package com.java.devdojo.javacore.introducaoclasses.hheranca.domain;
 
-public class Employee {
+// Note that I am highly coupling the code, because one change here broke all the subclasses.
+
+public class Employee { // technically, all classes in Java will extend somehow Object
     // Subclasses e classes no mesmo pacote herdam atributos "protected". Confira a classe Adress neste pacote.
     protected String name;
     protected String socialSecurityNumber;
     protected Address address;
     protected double salary;
+
+    public Employee(String name){
+        this.name = name;
+    }
+
+    public Employee(String name, String socialSecurityNumber) {
+        this(name); // remember that this calls the constructor above.
+        this.socialSecurityNumber = socialSecurityNumber;
+    }
 
     public void print(){
         System.out.println(this.name);

@@ -3,6 +3,10 @@ package com.java.devdojo.javacore.introducaoclasses.hheranca.domain;
 public class Manager extends Employee{
     private String department;
 
+    public Manager(String name){
+        super(name); // it calls the name constructor from Employee. And this needs to be the first valid statement
+    }
+
     @Override //it's explicites a override
     public void print(){
         super.print(); // it calls the method print from the superclass.

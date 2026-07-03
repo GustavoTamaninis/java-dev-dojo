@@ -5,7 +5,7 @@ public class Address {
     private String zipcode;
 
     public void print(){
-        Employee e = new Employee();
+        Employee e = new Employee("Djovanne");
         e.name = "Diego"; // exemplo de um atributo protected acessado por outra classe do mesmo pacote.
     }
 
