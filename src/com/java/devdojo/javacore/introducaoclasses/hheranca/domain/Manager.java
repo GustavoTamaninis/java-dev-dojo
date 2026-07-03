@@ -3,8 +3,19 @@ package com.java.devdojo.javacore.introducaoclasses.hheranca.domain;
 public class Manager extends Employee{
     private String department;
 
+    static{
+        System.out.println("Inside Manager static init block");
+    }
+    {
+        System.out.println("Inside Manager init block 1");
+    }
+    {
+        System.out.println("Inside Manager init block 2");
+    }
+
     public Manager(String name){
         super(name); // it calls the name constructor from Employee. And this needs to be the first valid statement
+        System.out.println("Inside Manager constructor"); // it cannot be added before the super.
     }
 
     @Override //it's explicites a override

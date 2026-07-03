@@ -8,8 +8,18 @@ public class Employee { // technically, all classes in Java will extend somehow 
     protected String socialSecurityNumber;
     protected Address address;
     protected double salary;
+    static{
+        System.out.println("Inside Employee static init block");
+    }
+    {
+        System.out.println("Inside Employee init block 1");
+    }
+    {
+        System.out.println("Inside Employee init block 2");
+    }
 
     public Employee(String name){
+        System.out.println("Inside Employee constructor");
         this.name = name;
     }
 
