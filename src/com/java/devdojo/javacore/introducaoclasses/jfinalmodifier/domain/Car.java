@@ -12,6 +12,12 @@ public class Car {
     static{
         SPEED_LIMIT = 240; //by the time you are done with loading this class in JVM, the value will be available to be used
     }
+
+    // using "final" in a method means that it can never be overridden
+    public final void print(){
+        System.out.println(this.name);
+    }
+
     public String getName() {
         return name;
     }
