@@ -1,5 +1,6 @@
 package com.java.devdojo.javacore.introducaoclasses.jfinalmodifier.domain;
 
+// use the access modifier "final" in a class that you don't want to be extended: nobody will be a car.
 public class Car {
     private String name;
     //public static final double SPEED_LIMIT = 250; // Once the final object is created, the final attribute can never change
