@@ -1,9 +1,7 @@
 package com.java.devdojo.javacore.introducaoclasses.kenumeration.domain;
 
 public class Customer {
-    public enum PaymentType{
-        DEBIT, CREDIT
-    }
+
     private String name;
     private CustomerType customerType; //a customer has a customer type
     private PaymentType paymentType;
