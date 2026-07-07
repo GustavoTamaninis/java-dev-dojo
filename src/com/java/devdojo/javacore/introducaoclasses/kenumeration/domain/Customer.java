@@ -1,19 +1,26 @@
 package com.java.devdojo.javacore.introducaoclasses.kenumeration.domain;
 
 public class Customer {
+    public enum PaymentType{
+        DEBIT, CREDIT
+    }
     private String name;
     private CustomerType customerType; //a customer has a customer type
+    private PaymentType paymentType;
 
-    public Customer(String name, CustomerType customerType) {
+    public Customer(String name, CustomerType customerType, PaymentType paymentType) {
         this.name = name;
         this.customerType = customerType;
+        this.paymentType = paymentType;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
                 "name='" + name + '\'' +
-                ", customerType=" + customerType +
+                ", customerTypeDatabaseValue=" + customerType.getDbValue() +
+                ", customerTypeReportValue=" + customerType.getReportValue() +
+                ", paymentType=" + paymentType +
                 '}';
     }
 
