@@ -14,7 +14,5 @@ public enum PaymentType{
         }
     };
 
-    public double calculateDiscount(double value){
-        return 0;
-    }
+    public abstract double calculateDiscount(double value); // this abstract method must be overridden
 }
