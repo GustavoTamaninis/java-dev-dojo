@@ -1,23 +1,14 @@
 package com.java.devdojo.javacore.javacore.npolimorphism.service;
 
-import com.java.devdojo.javacore.javacore.npolimorphism.domain.Computer;
-import com.java.devdojo.javacore.javacore.npolimorphism.domain.Tomato;
+import com.java.devdojo.javacore.javacore.npolimorphism.domain.Product;
 
 public class ProductTaxReportService {
 
-    public static void generateComputerTaxReport(Computer computer){
-        System.out.println("Starting report for Computer");
-        double taxValue = computer.calculateTaxPrice();
-        System.out.println("Computer " + computer.getName());
-        System.out.println("Price U$" + computer.getPrice());
-        System.out.println("Tax Value U$" + taxValue);
-    }
-
-    public static void generateTomatoTaxReport(Tomato tomato){
-        System.out.println("Starting report for Tomato");
-        double taxValue = tomato.calculateTaxPrice();
-        System.out.println("Tomato " + tomato.getName());
-        System.out.println("Price U$" + tomato.getPrice());
-        System.out.println("Tax Value U$" + taxValue);
+    public static void generateTaxReport(Product product){ //widening cast, because the super class receives an object from the subclass
+        System.out.println("Starting the tax report");
+        double taxValue = product.calculateTaxValue();
+        System.out.println("Product: " + product.getName());
+        System.out.println("Price: " + product.getPrice());
+        System.out.println("Tax Value: " + taxValue);
     }
 }
