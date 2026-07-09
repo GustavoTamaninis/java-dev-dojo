@@ -1,5 +1,6 @@
 package com.java.devdojo.javacore.introducaoclasses.mirterfaces.test;
 
+import com.java.devdojo.javacore.introducaoclasses.mirterfaces.domain.DataLoader;
 import com.java.devdojo.javacore.introducaoclasses.mirterfaces.domain.DatabaseLoader;
 import com.java.devdojo.javacore.introducaoclasses.mirterfaces.domain.FileLoader;
 
@@ -15,5 +16,8 @@ public class DataLoaderTest01 {
 
         databaseLoader.checkPermission();
         fileLoader.checkPermission();
+
+        DataLoader.retrieveMaxDataSize();
+        DatabaseLoader.retrieveMaxDataSize();
     }
 }
