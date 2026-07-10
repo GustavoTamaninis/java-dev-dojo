@@ -1,4 +1,4 @@
-package com.java.devdojo.javacore.javacore.oexception.test;
+package com.java.devdojo.javacore.javacore.oexception.error.test;
 
 public class StackOverFlowTest01 {
     // An exception, like everything in Java, is an object.
