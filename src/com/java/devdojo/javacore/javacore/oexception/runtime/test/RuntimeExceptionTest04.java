@@ -8,14 +8,10 @@ public class RuntimeExceptionTest04 {
     public static void main(String[] args) {
         try{
             throw new ArrayIndexOutOfBoundsException(); // o Java vai tentar achar essa exceção.
-        }catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Catch do ArrayIndexOutOfBoundsException");
+        }catch (ArrayIndexOutOfBoundsException | IllegalArgumentException | ArithmeticException e){
+            System.out.println("Catches de array, argumento ilegal e aritmético");
         }catch (IndexOutOfBoundsException e){ // Esta também é uma opção, pois ArrayIndexOutOfBounds extende esta classe (Polimorfismo). Quem vier primeiro, será escolhido
             System.out.println("Catch do IndexOutOfBoundsException");
-        }catch (IllegalArgumentException e){
-            System.out.println("Catch do IllegalArgumentException");
-        }catch (ArithmeticException e){
-            System.out.println("Catch do ArithmeticException");
         }catch (RuntimeException e){ // se não capturar nenhuma das outras, cai no mais genérico.
             // Porém, o tipo genérico não pode vir antes dos outros catches, pra não serem "unreachable"
             System.out.println("Catch do RuntimeException");
@@ -26,10 +22,8 @@ public class RuntimeExceptionTest04 {
 
         try{
             talvezLanceException();
-        }catch (SQLException e){
-            // código
-        }catch (FileNotFoundException e){ // Pode-se usar polimorfismo com IOException. Ou com Exception num único catch.
-            // código
+        }catch (SQLException | FileNotFoundException e){ // Pode-se usar polimorfismo com "Exception". E não posso fazer se forem da mesma linha de herança, tipo colocar IOException.
+            e.printStackTrace();
         }
     }
 
