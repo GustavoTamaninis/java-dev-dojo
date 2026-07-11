@@ -20,7 +20,7 @@ public class RuntimeExceptionTest02 {
     private static int divisao(int a, int b) throws IllegalArgumentException{ // it's possible too
 //    private static int divisao(int a, int b){
         if(b == 0){
-            throw new IllegalArgumentException("Argumento ilegal, não pode ser 0."); // it's like a "break"
+            throw new IllegalArgumentException("Argumento ilegal, não pode ser 0."); // it's like a "break". I'm creating the Exception, 'cause there's no an Exception. (in the catch?)
         }
         return a/b;
     }
