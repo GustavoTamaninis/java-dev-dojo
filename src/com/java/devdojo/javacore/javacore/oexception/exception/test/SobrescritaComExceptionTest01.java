@@ -14,6 +14,6 @@ public class SobrescritaComExceptionTest01 {
         } catch (LoginInvalidoException e) {
             throw new RuntimeException(e);
         }
-        pessoa.salvar();
+//        pessoa.salvar();
     }
 }
