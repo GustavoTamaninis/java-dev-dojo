@@ -1,6 +1,7 @@
 package com.java.devdojo.javacore.javacore.sformatting.test;
 
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Locale;
 
 public class NumberFormatTest01 {
@@ -15,9 +16,11 @@ public class NumberFormatTest01 {
         numf[2] = NumberFormat.getInstance(localeBR);
         numf[3] = NumberFormat.getInstance(localeIT);
 
-        double value = 10_000_000.2130;
-        for (NumberFormat numberFormat : numf){
-            System.out.println(numberFormat.format(value));
+        String stringValue = "1000.2130"; // para de converter a partir de um caractere inválido.
+        try {
+            System.out.println(numf[0].parse(stringValue));
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
     }
 }
