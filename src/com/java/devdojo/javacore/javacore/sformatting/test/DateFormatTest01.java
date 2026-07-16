@@ -1,4 +1,4 @@
-package com.java.devdojo.javacore.javacore.rdates.test;
+package com.java.devdojo.javacore.javacore.sformatting.test;
 
 import java.text.DateFormat;
 import java.util.Calendar;
