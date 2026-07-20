@@ -12,6 +12,8 @@ public class FileReaderTest01 {
 //            System.out.println(fr.read()); // lê o ascii do primeiro caractere.
 //            char[] in = new char[30]; // in -> input. Devo escolher a quantidade de informações que vou querer ler.
 //            fr.read(in); // É como um buffer em memória. Vai chamar o array e armazenar o valor nele:
+//            //int size = fr.read(in);
+//            //System.out.println(size); // retorna o tamanho
 //            for (char c : in){
 //                System.out.print(c);
 //            }
