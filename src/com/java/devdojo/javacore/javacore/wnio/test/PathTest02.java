@@ -1,5 +1,6 @@
 package com.java.devdojo.javacore.javacore.wnio.test;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,5 +31,14 @@ public class PathTest02 {
         Path source = filePath;
         Path target = Paths.get(filePath.getParent().toString(), "file01Renomeado.txt"); // ao invés do getParent(), posso  usar a subpastaDirectory
         Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
+
+        // Normalização:
+        // subPastaDiretorio
+        String arquivoTxt = "../normalizacao.txt";
+        filePath = Paths.get(subPastaPath.toString(), arquivoTxt);
+        System.out.println(filePath.normalize());
+        if(Files.notExists(filePath)){
+            Path fileNormalizado = Files.createFile(filePath);
+        }
     }
 }
