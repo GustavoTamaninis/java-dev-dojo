@@ -1,6 +1,7 @@
 package com.java.devdojo.javacore.javacore.xserialization.test;
 
 import com.java.devdojo.javacore.javacore.xserialization.domain.Aluno;
+import com.java.devdojo.javacore.javacore.xserialization.domain.Turma;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -12,15 +13,17 @@ import java.nio.file.Paths;
 public class SerializationTest01 {
     static void main(String[] args) {
         Aluno aluno01 = new Aluno(1, "Gustavo", "12345");
+        Turma turma01 = new Turma("Análise e Desenvolvimento de Sistemas");
+        aluno01.setTurma(turma01);
         serializar(aluno01);
         desserializar();
     }
 
     // salvar o estado do objeto:
-    private static void serializar(Aluno aluno){
+    private static void serializar(Aluno aluno) {
         // Transformar o objeto em um array de bytes, baixo nível. Ou seja, utilizo uma classe stream:
         Path path = Paths.get("/home/gustavotama/IdeaProjects/java-dev-dojo/src/com/java/devdojo/javacore/javacore/xserialization/files/aluno.ser");
-        try(ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(path))) { // lembre-se que se usa recursos do OS, deve-se fechá-lo.
+        try (ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(path))) { // lembre-se que se usa recursos do OS, deve-se fechá-lo.
             oos.writeObject(aluno);
         } catch (IOException e) {
             e.printStackTrace(); // Para não gerar uma exceção, é necessário que a classe implemente a interface Seriazible.
@@ -28,12 +31,13 @@ public class SerializationTest01 {
     }
 
     // desserealizar o objeto:
-    private static void desserializar(){
+    private static void desserializar() {
         Path path = Paths.get("/home/gustavotama/IdeaProjects/java-dev-dojo/src/com/java/devdojo/javacore/javacore/xserialization/files/aluno.ser");
-        try(ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(path))){
+        try (ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(path))) {
             Aluno aluno = (Aluno) ois.readObject();
             System.out.println(aluno.toString());
-        } catch (IOException | ClassNotFoundException e) { // o pipe, aqui, não é um operador boolean, mas um separador de tipos, um multi-catch
+        } catch (IOException |
+                 ClassNotFoundException e) { // o pipe, aqui, não é um operador boolean, mas um separador de tipos, um multi-catch
             e.printStackTrace();
         }
     }
