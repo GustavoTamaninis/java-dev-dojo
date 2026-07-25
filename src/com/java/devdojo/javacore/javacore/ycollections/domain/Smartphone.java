@@ -29,6 +29,18 @@ public class Smartphone {
         // as regras de negócio definem o que são objetos iguais.
     }
 
+    @Override
+    /*
+        Regras:
+        - Se x.equals(y) == true, logo y.hashCode(x) == x.hashCode();
+        - y.hashCode() == x.hashCode() não necessariamente y.equals(x) deve ser true.
+        - x.equals(y) == false, o hashcode deve ser diferente
+        = y.hashCode() != x.hashCode(), x.equals(y) deverá ser false.
+     */
+    public int hashCode() { // É um native int, ou seja, foi escrito em outra linguagem de programação.
+        return serialNumber == null ? 0 : this.serialNumber.hashCode();
+    }
+
     public String getSerialNumber() {
         return serialNumber;
     }
