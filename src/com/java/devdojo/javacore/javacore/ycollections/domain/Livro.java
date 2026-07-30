@@ -47,10 +47,9 @@ public class Livro implements Comparable<Livro>{
 //        else if(this.id.equals(outroLivro.getId())) return 0;
 //        else return 1;
         // O Long, diferente de tipos primitivos, já possui compare:
-        return this.id.compareTo(outroLivro.getId()); // ordenando por id
-
+//        return this.id.compareTo(outroLivro.getId()); // ordenando por id
 //        return Double.compare(preco, outroLivro.getPreco()); // ordenando por preço
-
+        return this.nome.compareTo(outroLivro.getNome()); // ordenando por nome.
     }
 
     public Long getId() {
