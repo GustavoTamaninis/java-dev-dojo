@@ -2,15 +2,16 @@ package com.java.devdojo.javacore.javacore.ycollections.domain;
 
 import java.util.Objects;
 
-public class Livro {
-    private Long id;
+// Comparable é a interface que me provê meios de definir que ordem deve ser ordenada uma lista de Livros.
+public class Livro implements Comparable<Livro>{
+    private Long id; // é um wrapper e já possui compareTo.
     private String nome;
     private double preco;
 
     public Livro(Long id, String nome, double preco) {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(nome);
-        Objects.requireNonNull(preco);
+        Objects.requireNonNull(id, "id não pode ser nulo");
+        Objects.requireNonNull("nome não pode ser nulo");
+        Objects.requireNonNull("preço não pode ser nulo");
         this.id = id;
         this.nome = nome;
         this.preco = preco;
@@ -35,6 +36,21 @@ public class Livro {
     @Override
     public int hashCode() {
         return Objects.hash(id, nome, preco);
+    }
+
+    @Override
+    public int compareTo(Livro outroLivro) {
+        // Retorne negativo se o this < outroLivro;
+        // Retorne 0 se this = outroLivro;
+        // Retorne positivo this > outroLivro.
+//        if(this.id < outroLivro.getId()) return -1;
+//        else if(this.id.equals(outroLivro.getId())) return 0;
+//        else return 1;
+        // O Long, diferente de tipos primitivos, já possui compare:
+        return this.id.compareTo(outroLivro.getId()); // ordenando por id
+
+//        return Double.compare(preco, outroLivro.getPreco()); // ordenando por preço
+
     }
 
     public Long getId() {
