@@ -7,6 +7,7 @@ public class Livro implements Comparable<Livro>{
     private Long id; // é um wrapper e já possui compareTo.
     private String nome;
     private double preco;
+    private int qtde;
 
     public Livro(Long id, String nome, double preco) {
         Objects.requireNonNull(id, "id não pode ser nulo");
@@ -17,12 +18,18 @@ public class Livro implements Comparable<Livro>{
         this.preco = preco;
     }
 
+    public Livro(Long id, String nome, double preco, int qtde) {
+        this(id, nome, preco);
+        this.qtde = qtde;
+    }
+
     @Override
-    public String  toString() {
+    public String toString() {
         return "Livro{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
+                ", qtde=" + qtde +
                 '}';
     }
 
@@ -75,4 +82,8 @@ public class Livro implements Comparable<Livro>{
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    public int getQtde() { return qtde;  }
+
+    public void setQtde(int qtde) { this.qtde = qtde; }
 }

@@ -13,7 +13,7 @@ public class Livro {
     }
 
     //Sobrecarga de métodos: mesmo nome, parâmetros diferentes:
-    public void init(String nome, int paginas,String genero){
+    public void init(String nome, int paginas, String genero){
         this.init(nome, tipo, paginas);
         this.genero = genero;
     }

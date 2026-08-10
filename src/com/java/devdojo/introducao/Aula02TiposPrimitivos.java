@@ -1,6 +1,7 @@
 package com.java.devdojo.introducao;
 
 public class Aula02TiposPrimitivos {
+
     public static void main(String[] args) {
         int age = 10; // int possui 4 bytes (32 bits), de -2147483648 a 2147483647;
         long numeroGrande = 100000; // long possui 8 bytes (64 bits);

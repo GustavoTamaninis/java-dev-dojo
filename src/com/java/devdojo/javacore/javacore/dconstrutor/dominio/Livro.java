@@ -39,10 +39,11 @@ public class Livro {
 //    }
 
     public void imprime(){
-        System.out.println(this.nome);
-        System.out.println(this.tipo);
-        System.out.println(this.paginas);
-        System.out.println(this.genero);
+        if(this.nome != null) System.out.println(this.nome);
+        if(this.tipo != null) System.out.println(this.tipo);
+//        if(this.paginas != null) System.out.println(this.paginas);
+        if(this.genero != null) System.out.println(this.genero);
+        if(this.editora != null) System.out.println(this.editora);
     }
 
     public void setNome(String nome) {
@@ -69,8 +70,14 @@ public class Livro {
     public String getGenero() {
         return genero;
     }
-
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+    public void setEditora(String editora) {
+        this.editora = editora;
     }
 }
