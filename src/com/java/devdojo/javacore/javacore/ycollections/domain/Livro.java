@@ -37,12 +37,13 @@ public class Livro implements Comparable<Livro>{
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Livro livro = (Livro) o;
-        return Double.compare(preco, livro.preco) == 0 && Objects.equals(id, livro.id) && Objects.equals(nome, livro.nome);
+//        return Double.compare(preco, livro.preco) == 0 && Objects.equals(id, livro.id) && Objects.equals(nome, livro.nome);
+        return Objects.equals(id, livro.id) && Objects.equals(nome, livro.nome);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, preco);
+        return Objects.hash(id, nome);
     }
 
     @Override
